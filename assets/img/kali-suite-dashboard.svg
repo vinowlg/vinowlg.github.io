@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Kali Suite dashboard showing test run history, pass rate and recent runs triaged by AI agents">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B3D2E"/>
+      <stop offset="1" stop-color="#134D3B"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B3D2E" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#0B3D2E" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+    <style>
+      text { font-family: Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .k { font-size: 8px; font-weight: 600; letter-spacing: .9px; fill: #7B8480; }
+      .v { font-size: 17px; font-weight: 600; fill: #16201C; }
+      .s { font-size: 8.5px; fill: #4A544F; }
+      .row { font-size: 9px; fill: #16201C; }
+      .chip { font-size: 7.5px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <g opacity=".08" stroke="#FFFFFF">
+    <circle cx="590" cy="40" r="90" fill="none"/>
+    <circle cx="590" cy="40" r="140" fill="none"/>
+    <circle cx="40" cy="340" r="110" fill="none"/>
+  </g>
+
+  <!-- window -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="30" width="568" height="330" rx="12" fill="#FAF9F5"/>
+  </g>
+  <path d="M36 42a12 12 0 0 1 12-12h544a12 12 0 0 1 12 12v14H36z" fill="#F1EFE8"/>
+  <circle cx="54" cy="43" r="3.5" fill="#D9A3AF"/>
+  <circle cx="66" cy="43" r="3.5" fill="#CDD0D4"/>
+  <circle cx="78" cy="43" r="3.5" fill="#A9C3B8"/>
+  <rect x="236" y="36" width="168" height="14" rx="7" fill="#FFFFFF"/>
+  <text x="320" y="46" text-anchor="middle" font-size="7.5" fill="#7B8480">kali-suite / dashboard</text>
+
+  <!-- sidebar -->
+  <rect x="36" y="56" width="92" height="304" fill="#0B3D2E"/>
+  <g transform="translate(48 70)">
+    <g stroke="#7A2036" stroke-width="1.4"><line x1="10" y1="8" x2="10" y2="0"/><line x1="10" y1="8" x2="10" y2="16"/><line x1="10" y1="8" x2="2" y2="3"/><line x1="10" y1="8" x2="2" y2="13"/></g>
+    <g fill="#C65670"><circle cx="10" cy="0" r="1.8"/><circle cx="10" cy="16" r="1.8"/><circle cx="2" cy="3" r="1.8"/><circle cx="2" cy="13" r="1.8"/></g>
+    <circle cx="10" cy="8" r="3" fill="#FFFFFF"/>
+    <text x="18" y="12" font-size="11" font-weight="700" fill="#FFFFFF">kali</text>
+    <text x="42" y="12" font-size="7" font-weight="500" fill="#B9CBC3">suite</text>
+  </g>
+  <g font-size="8.5" fill="#B9CBC3">
+    <rect x="44" y="100" width="76" height="20" rx="6" fill="#FFFFFF" fill-opacity=".1"/>
+    <text x="54" y="113" fill="#FFFFFF" font-weight="600">Dashboard</text>
+    <text x="54" y="138">Test runs</text>
+    <text x="54" y="160">Test library</text>
+    <text x="54" y="182">Scenarios</text>
+    <text x="54" y="204">Agents</text>
+    <text x="54" y="226">Pipelines</text>
+  </g>
+  <rect x="44" y="318" width="76" height="26" rx="8" fill="#7A2036"/>
+  <text x="82" y="334" text-anchor="middle" font-size="8.5" font-weight="600" fill="#FFFFFF">▶  New run</text>
+
+  <!-- KPI tiles -->
+  <g>
+    <rect x="142" y="68" width="140" height="58" rx="8" fill="#FFFFFF" stroke="#E2E0D8"/>
+    <rect x="292" y="68" width="140" height="58" rx="8" fill="#FFFFFF" stroke="#E2E0D8"/>
+    <rect x="442" y="68" width="148" height="58" rx="8" fill="#FFFFFF" stroke="#E2E0D8"/>
+    <text x="154" y="85" class="k">PASS RATE</text>
+    <text x="154" y="106" class="v">97.4%</text>
+    <text x="154" y="118" class="s"><tspan fill="#0B3D2E" font-weight="600">▲ 2.1</tspan> vs last week</text>
+    <text x="304" y="85" class="k">SUITE RUNTIME</text>
+    <text x="304" y="106" class="v">6m 12s</text>
+    <text x="304" y="118" class="s">1,240 tests · 32 workers</text>
+    <text x="454" y="85" class="k">AGENT TRIAGE</text>
+    <text x="454" y="106" class="v">14</text>
+    <text x="478" y="106" class="s">failures analysed</text>
+    <text x="454" y="118" class="s"><tspan fill="#7A2036" font-weight="600">3 defects</tspan> · 9 tests healed</text>
+  </g>
+
+  <!-- chart -->
+  <rect x="142" y="136" width="258" height="208" rx="8" fill="#FFFFFF" stroke="#E2E0D8"/>
+  <text x="154" y="154" class="k">RUN HISTORY · LAST 14 RUNS</text>
+  <g stroke="#EEF0EC" stroke-width="1">
+    <line x1="156" y1="180" x2="388" y2="180"/>
+    <line x1="156" y1="224" x2="388" y2="224"/>
+    <line x1="156" y1="268" x2="388" y2="268"/>
+    <line x1="156" y1="312" x2="388" y2="312"/>
+  </g>
+  <!-- stacked bars: passed (green) + failed (maroon) -->
+  <g>
+    <g fill="#0B3D2E">
+      <rect x="160" y="196" width="10" height="116" rx="2"/>
+      <rect x="176" y="190" width="10" height="122" rx="2"/>
+      <rect x="192" y="200" width="10" height="112" rx="2"/>
+      <rect x="208" y="186" width="10" height="126" rx="2"/>
+      <rect x="224" y="192" width="10" height="120" rx="2"/>
+      <rect x="240" y="210" width="10" height="102" rx="2"/>
+      <rect x="256" y="188" width="10" height="124" rx="2"/>
+      <rect x="272" y="184" width="10" height="128" rx="2"/>
+      <rect x="288" y="190" width="10" height="122" rx="2"/>
+      <rect x="304" y="182" width="10" height="130" rx="2"/>
+      <rect x="320" y="186" width="10" height="126" rx="2"/>
+      <rect x="336" y="180" width="10" height="132" rx="2"/>
+      <rect x="352" y="184" width="10" height="128" rx="2"/>
+      <rect x="368" y="178" width="10" height="134" rx="2"/>
+    </g>
+    <g fill="#7A2036">
+      <rect x="160" y="184" width="10" height="10" rx="2"/>
+      <rect x="176" y="182" width="10" height="6" rx="2"/>
+      <rect x="192" y="186" width="10" height="12" rx="2"/>
+      <rect x="208" y="180" width="10" height="4" rx="2"/>
+      <rect x="224" y="184" width="10" height="6" rx="2"/>
+      <rect x="240" y="188" width="10" height="20" rx="2"/>
+      <rect x="256" y="182" width="10" height="4" rx="2"/>
+      <rect x="272" y="180" width="10" height="2" rx="1"/>
+      <rect x="288" y="184" width="10" height="4" rx="2"/>
+      <rect x="304" y="178" width="10" height="2" rx="1"/>
+      <rect x="320" y="182" width="10" height="2" rx="1"/>
+      <rect x="352" y="180" width="10" height="2" rx="1"/>
+    </g>
+  </g>
+  <g font-size="7.5" fill="#4A544F">
+    <rect x="156" y="324" width="7" height="7" rx="1.5" fill="#0B3D2E"/><text x="167" y="330.5">Passed</text>
+    <rect x="204" y="324" width="7" height="7" rx="1.5" fill="#7A2036"/><text x="215" y="330.5">Failed</text>
+  </g>
+
+  <!-- recent runs -->
+  <rect x="410" y="136" width="180" height="208" rx="8" fill="#FFFFFF" stroke="#E2E0D8"/>
+  <text x="422" y="154" class="k">RECENT RUNS</text>
+  <g>
+    <line x1="422" y1="164" x2="578" y2="164" stroke="#EEF0EC"/>
+    <text x="422" y="180" class="row" font-weight="600">Checkout · GUI</text>
+    <text x="422" y="192" class="s">412 tests · 2m 48s</text>
+    <rect x="534" y="174" width="44" height="14" rx="7" fill="#E3EBE7"/><text x="556" y="184" text-anchor="middle" class="chip" fill="#0B3D2E">Passed</text>
+
+    <line x1="422" y1="202" x2="578" y2="202" stroke="#EEF0EC"/>
+    <text x="422" y="218" class="row" font-weight="600">Payments · API</text>
+    <text x="422" y="230" class="s">Defect raised · fix MR ready</text>
+    <rect x="534" y="212" width="44" height="14" rx="7" fill="#F3E6E9"/><text x="556" y="222" text-anchor="middle" class="chip" fill="#7A2036">Defect</text>
+
+    <line x1="422" y1="240" x2="578" y2="240" stroke="#EEF0EC"/>
+    <text x="422" y="256" class="row" font-weight="600">Onboarding · GUI</text>
+    <text x="422" y="268" class="s">Outdated step updated</text>
+    <rect x="534" y="250" width="44" height="14" rx="7" fill="#F1EFE8" stroke="#CDD0D4"/><text x="556" y="260" text-anchor="middle" class="chip" fill="#4A544F">Healed</text>
+
+    <line x1="422" y1="278" x2="578" y2="278" stroke="#EEF0EC"/>
+    <text x="422" y="294" class="row" font-weight="600">Search · API</text>
+    <text x="422" y="306" class="s">186 tests · 54s</text>
+    <rect x="534" y="288" width="44" height="14" rx="7" fill="#E3EBE7"/><text x="556" y="298" text-anchor="middle" class="chip" fill="#0B3D2E">Passed</text>
+
+    <line x1="422" y1="316" x2="578" y2="316" stroke="#EEF0EC"/>
+    <circle cx="426" cy="330" r="3" fill="#7A2036"/>
+    <text x="434" y="333" class="s">Agent: awaiting your approval</text>
+  </g>
+</svg>
