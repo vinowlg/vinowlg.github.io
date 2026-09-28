@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <link rel="canonical" href="https://kali.ltd/automation.html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kali Suite — Software Test Automation | kali.ltd</title>
+  <meta name="description" content="Kali Suite, a database-driven alternative to BDD and Selenium: Playwright GUI and API tests, a scalable concurrent runner, and AI agents that triage regressions.">
+  <meta property="og:title" content="Kali Suite — Software Test Automation | kali.ltd">
+  <meta property="og:description" content="Kali Suite, a database-driven alternative to BDD and Selenium: Playwright GUI and API tests, a scalable concurrent runner, and AI agents that triage regressions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kali.ltd/automation.html">
+  <meta property="og:image" content="https://kali.ltd/assets/img/logo.png">
+  <meta name="theme-color" content="#0B3D2E">
+  <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="kali home"><img src="assets/img/logo-kali.png" alt="kali" width="168" height="96"></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ai-solutions.html">AI Solutions</a></li>
+      <li><a href="automation.html" aria-current="page">Software Automation</a></li>
+      <li><a class="nav-cta" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Kali Suite · Software Test Automation</p>
+        <h1>Kali Suite: a database-driven alternative to <em class="accent">BDD and Selenium</em>.</h1>
+        <p class="lede">Kali Suite is GUI and API test automation where tests live as structured data, run concurrently at scale, and are looked after by AI agents that triage regressions, raise defects and propose fixes, with your approval at every step that changes code.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="contact.html?topic=automation">Request a walkthrough <span class="arrow">→</span></a>
+          <a class="btn btn-ghost" href="#agents">See the AI agents</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap reveal">
+    <div class="wide-img"><img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=2000&q=75" alt="Source code on a screen"></div>
+  </div>
+
+  <!-- Comparison -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why database-driven</p>
+        <h2>Tests as data, not glue code.</h2>
+        <p class="lede">Traditional BDD and Selenium frameworks spread tests across feature files, step definitions and page objects. Kali Suite stores them as structured, queryable records, which makes them easier to author, maintain, and hand to an agent.</p>
+      </div>
+      <div class="table-scroll reveal">
+        <table class="compare">
+          <thead>
+            <tr><th></th><th>Traditional BDD / Selenium</th><th>Kali Suite</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Where tests live</th><td data-label="Traditional">Feature files, step definitions and code in the repository</td><td data-label="Kali Suite">Structured records in a database: cases, scenarios, prerequisites, steps and validations</td></tr>
+            <tr><th>Authoring</th><td data-label="Traditional">Engineers write and maintain step-definition glue</td><td data-label="Kali Suite">Add and edit tests from a UI, with no glue code to keep in sync</td></tr>
+            <tr><th>Engine</th><td data-label="Traditional">Selenium WebDriver, often with a separate API tool</td><td data-label="Kali Suite">Playwright for GUI, plus built-in API testing</td></tr>
+            <tr><th>Execution</th><td data-label="Traditional">Sequential runs or a grid to maintain</td><td data-label="Kali Suite">A scalable runner service that executes tests concurrently</td></tr>
+            <tr><th>Failure triage</th><td data-label="Traditional">Manual investigation of every red build</td><td data-label="Kali Suite">AI agents analyse, correlate with Jira, raise defects and propose fixes</td></tr>
+            <tr><th>Reporting</th><td data-label="Traditional">Static report per run</td><td data-label="Kali Suite">Dashboard with historical runs, outcomes and trends</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agents -->
+  <section class="dark" id="agents">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Kali regression agents</p>
+        <h2>From red build to root cause, automatically.</h2>
+        <p class="lede">When a test fails, agents do the first round of investigation that usually eats an engineer’s morning, then take the right next step.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="step"><h4>Catch</h4><p>Detect a regression as soon as a run completes, in CI or on demand.</p></div>
+        <div class="step"><h4>Analyse</h4><p>Examine logs, screenshots, traces and recent changes to find the likely cause.</p></div>
+        <div class="step"><h4>Correlate</h4><p>Find the Jira issue behind the change that introduced the regression.</p></div>
+        <div class="step"><h4>Decide</h4><p>Classify the failure as a genuine product defect or an outdated test.</p></div>
+      </div>
+      <div class="branches reveal">
+        <div class="branch defect">
+          <div class="label">If it’s a genuine defect</div>
+          <h4>Raise it, and propose the fix</h4>
+          <ol>
+            <li>Create a new Jira defect with the evidence attached</li>
+            <li>Propose a code fix for review</li>
+            <li>Once you approve, open the fix merge request</li>
+          </ol>
+        </div>
+        <div class="branch test">
+          <div class="label">If the test is out of date</div>
+          <h4>Update the test</h4>
+          <ol>
+            <li>Detect that the application changed intentionally</li>
+            <li>Update the test definition in the database</li>
+            <li>Re-run to confirm, with the change logged for review</li>
+          </ol>
+        </div>
+      </div>
+      <p class="flow-note reveal"><span>●</span> Humans stay in control: no code change is submitted without explicit approval.</p>
+    </div>
+  </section>
+
+  <!-- Platform -->
+  <section>
+    <div class="wrap">
+      <div class="split">
+        <div class="split-img reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=75" alt="Laptop showing code on a clean desk"></div>
+        <div class="reveal">
+          <p class="eyebrow">Tests as data</p>
+          <h2>Every test, structured and searchable.</h2>
+          <p class="muted">Test cases, scenarios, prerequisites, steps and validations are stored in a database, so tests can be reused, queried, versioned and maintained without wading through code.</p>
+          <ul class="checks">
+            <li><strong>GUI tests on Playwright.</strong> Modern, reliable browser automation across engines.</li>
+            <li><strong>API tests alongside.</strong> One suite for the interface and the services behind it.</li>
+            <li><strong>Reusable building blocks.</strong> Shared prerequisites and steps across scenarios.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="split flip">
+        <div class="split-img reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=75" alt="Server racks in a data centre"></div>
+        <div class="reveal">
+          <p class="eyebrow">Scalable runner</p>
+          <h2>Fast feedback, at any scale.</h2>
+          <p class="muted">The test runner is a highly scalable service that executes tests concurrently. Add it as a stage in your existing CI/CD pipelines to give developers feedback while the change is still fresh.</p>
+          <ul class="checks">
+            <li><strong>Concurrent execution.</strong> Scale out to shorten suite runtime.</li>
+            <li><strong>Pipeline-native.</strong> Drops into your existing CI/CD as another stage.</li>
+            <li><strong>Run what matters.</strong> Target suites, tags or individual tests per pipeline.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="split-img reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=75" alt="Laptop showing an analytics dashboard"></div>
+        <div class="reveal">
+          <p class="eyebrow">UI &amp; dashboard</p>
+          <h2>One place for the whole team.</h2>
+          <p class="muted">The Kali Suite web interface is built for testers, developers and managers alike, with no command line required.</p>
+          <ul class="checks">
+            <li><strong>Start runs.</strong> Select tests or suites and launch them on demand.</li>
+            <li><strong>Author tests.</strong> Add and edit tests directly through the UI.</li>
+            <li><strong>Track history.</strong> Dashboard of historical runs, outcomes and trends.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics -->
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">What we measure</p>
+        <h2>Quality you can put a number on.</h2>
+        <p class="lede">We baseline your current test process and report improvement against it.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card reveal">
+          <div class="icon m"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3>Time to feedback</h3>
+          <p>How long from commit to a trustworthy test result.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon m"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3>Time to triage</h3>
+          <p>How long from a failure to a known cause and an owner.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon m"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Flaky and outdated tests</h3>
+          <p>The share of failures that are test problems, not product problems.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon m"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Defects caught before release</h3>
+          <p>Regressions stopped in the pipeline rather than found by users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta reveal">
+        <img class="mark-bg" src="assets/img/mark.svg" alt="">
+        <div>
+          <h2>Spend less time on red builds.</h2>
+          <p>See how Kali Suite and its AI regression agents fit into your pipeline.</p>
+        </div>
+        <a class="btn btn-light" href="contact.html?topic=automation">Request a walkthrough <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-brand" href="index.html"><img src="assets/img/mark.svg" alt=""><span>kali<span class="dot">.</span><span class="tld">ltd</span></span></a>
+        <p style="margin-top:16px; max-width:340px;">A small, focused team building AI agentic solutions and intelligent test automation.</p>
+      </div>
+      <div>
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="ai-solutions.html">AI Solutions</a></li>
+          <li><a href="automation.html">Software Automation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span data-year>2026</span> kali.ltd. All rights reserved.</span>
+      <span>Metrics-driven delivery.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
