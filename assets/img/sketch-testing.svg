@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <filter id="sk" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="g" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.85" fill="#0B3D2E" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="500" height="400" fill="#faf9f2"/>
+  <rect width="500" height="400" fill="url(#g)"/>
+
+  <!-- DB table (top section) -->
+  <g filter="url(#sk)" stroke="#0B3D2E" stroke-linejoin="round">
+    <!-- outer table -->
+    <rect x="44" y="42" width="412" height="148" rx="4" fill="rgba(11,61,46,0.04)" stroke-width="1.3"/>
+    <!-- header row -->
+    <rect x="44" y="42" width="412" height="28" rx="4" fill="rgba(11,61,46,0.07)" stroke-width="1.3"/>
+    <line x1="44" y1="70" x2="456" y2="70" stroke="#0B3D2E" stroke-width="0.8" opacity="0.4"/>
+    <!-- column dividers -->
+    <line x1="146" y1="42" x2="146" y2="190" stroke="#0B3D2E" stroke-width="0.7" opacity="0.25"/>
+    <line x1="248" y1="42" x2="248" y2="190" stroke="#0B3D2E" stroke-width="0.7" opacity="0.25"/>
+    <line x1="350" y1="42" x2="350" y2="190" stroke="#0B3D2E" stroke-width="0.7" opacity="0.25"/>
+    <!-- row lines -->
+    <line x1="44" y1="102" x2="456" y2="102" stroke="#0B3D2E" stroke-width="0.6" opacity="0.18"/>
+    <line x1="44" y1="134" x2="456" y2="134" stroke="#0B3D2E" stroke-width="0.6" opacity="0.18"/>
+    <line x1="44" y1="166" x2="456" y2="166" stroke="#0B3D2E" stroke-width="0.6" opacity="0.18"/>
+  </g>
+  <!-- header labels -->
+  <g font-family="'Courier New',monospace" fill="#0B3D2E" opacity="0.65" font-size="8.5" letter-spacing="1">
+    <text x="95" y="61">SUITE</text>
+    <text x="192" y="61">SCENARIO</text>
+    <text x="294" y="61">STEPS</text>
+    <text x="390" y="61">EXPECTED</text>
+  </g>
+  <!-- data rows (abstract lines) -->
+  <g stroke="#0B3D2E" stroke-width="0.7" opacity="0.28" filter="url(#sk)">
+    <line x1="58" y1="86" x2="132" y2="86"/>  <line x1="160" y1="86" x2="234" y2="86"/>  <line x1="262" y1="86" x2="336" y2="86"/>  <line x1="364" y1="86" x2="442" y2="86"/>
+    <line x1="58" y1="118" x2="120" y2="118"/> <line x1="160" y1="118" x2="240" y2="118"/> <line x1="262" y1="118" x2="330" y2="118"/> <line x1="364" y1="118" x2="436" y2="118"/>
+    <line x1="58" y1="150" x2="136" y2="150"/> <line x1="160" y1="150" x2="228" y2="150"/> <line x1="262" y1="150" x2="340" y2="150"/> <line x1="364" y1="150" x2="442" y2="150"/>
+    <line x1="58" y1="178" x2="114" y2="178"/> <line x1="160" y1="178" x2="244" y2="178"/> <line x1="262" y1="178" x2="320" y2="178"/> <line x1="364" y1="178" x2="432" y2="178"/>
+  </g>
+  <text x="250" y="28" font-family="'Courier New',monospace" font-size="8" fill="#0B3D2E" opacity="0.4" text-anchor="middle" letter-spacing="1">TEST_CASES DATABASE</text>
+
+  <!-- arrow down -->
+  <g stroke="#0B3D2E" stroke-width="1" opacity="0.45" filter="url(#sk)">
+    <line x1="250" y1="190" x2="250" y2="224"/>
+    <polyline points="244,218 250,225 256,218" fill="none"/>
+  </g>
+  <text x="270" y="213" font-family="'Courier New',monospace" font-size="7.5" fill="#0B3D2E" opacity="0.35" letter-spacing="0.8">QUERY &amp; EXECUTE</text>
+
+  <!-- runner box -->
+  <g filter="url(#sk)" fill="rgba(11,61,46,0.05)" stroke="#0B3D2E" stroke-width="1.3" stroke-linejoin="round">
+    <rect x="130" y="226" width="240" height="54" rx="4"/>
+  </g>
+  <!-- gear/runner visual inside -->
+  <g filter="url(#sk)" fill="none" stroke="#0B3D2E" stroke-width="1" opacity="0.45">
+    <circle cx="202" cy="253" r="14"/>
+    <circle cx="202" cy="253" r="6"/>
+    <circle cx="250" cy="253" r="14"/>
+    <circle cx="250" cy="253" r="6"/>
+    <circle cx="298" cy="253" r="14"/>
+    <circle cx="298" cy="253" r="6"/>
+  </g>
+  <!-- gear teeth hints -->
+  <g stroke="#0B3D2E" stroke-width="0.8" opacity="0.25" filter="url(#sk)">
+    <line x1="202" y1="237" x2="202" y2="231"/>
+    <line x1="202" y1="269" x2="202" y2="275"/>
+    <line x1="188" y1="253" x2="182" y2="253"/>
+    <line x1="216" y1="253" x2="222" y2="253"/>
+    <line x1="250" y1="237" x2="250" y2="231"/>
+    <line x1="250" y1="269" x2="250" y2="275"/>
+    <line x1="298" y1="237" x2="298" y2="231"/>
+    <line x1="298" y1="269" x2="298" y2="275"/>
+  </g>
+  <text x="250" y="293" font-family="'Courier New',monospace" font-size="8" fill="#0B3D2E" opacity="0.4" text-anchor="middle" letter-spacing="1">TEST RUNNER</text>
+
+  <!-- arrow down -->
+  <g stroke="#0B3D2E" stroke-width="1" opacity="0.45" filter="url(#sk)">
+    <line x1="250" y1="296" x2="250" y2="318"/>
+    <polyline points="244,312 250,319 256,312" fill="none"/>
+  </g>
+
+  <!-- results row -->
+  <g filter="url(#sk)">
+    <rect x="54" y="320" width="116" height="46" rx="3" fill="rgba(11,61,46,0.05)" stroke="#0B3D2E" stroke-width="1.1" stroke-linejoin="round"/>
+    <rect x="192" y="320" width="116" height="46" rx="3" fill="rgba(11,61,46,0.05)" stroke="#0B3D2E" stroke-width="1.1" stroke-linejoin="round"/>
+    <rect x="330" y="320" width="116" height="46" rx="3" fill="rgba(122,32,54,0.06)" stroke="#7A2036" stroke-width="1.1" stroke-linejoin="round"/>
+  </g>
+  <g font-family="'Courier New',monospace" text-anchor="middle" fill="#0B3D2E" opacity="0.62" font-size="8" letter-spacing="0.8">
+    <text x="112" y="340">✓ PASS</text>
+    <text x="112" y="354">41 tests</text>
+    <text x="250" y="340">◷ PENDING</text>
+    <text x="250" y="354">6 tests</text>
+  </g>
+  <g font-family="'Courier New',monospace" text-anchor="middle" fill="#7A2036" opacity="0.65" font-size="8" letter-spacing="0.8">
+    <text x="388" y="340">✗ TRIAGE</text>
+    <text x="388" y="354">1 failure</text>
+  </g>
+
+  <text x="34" y="388" font-family="'Courier New',monospace" font-size="7.5" fill="#0B3D2E" opacity="0.28" letter-spacing="1">KALI SUITE — TESTS AS DATA</text>
+  <text x="466" y="388" font-family="'Courier New',monospace" font-size="7" fill="#0B3D2E" opacity="0.22" text-anchor="end" letter-spacing="1">FIG 08</text>
+</svg>

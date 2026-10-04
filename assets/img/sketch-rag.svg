@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <filter id="sk" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="g" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.85" fill="#0B3D2E" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="500" height="400" fill="#faf9f2"/>
+  <rect width="500" height="400" fill="url(#g)"/>
+
+  <!-- document stack (left) — 3 slightly offset rectangles -->
+  <g filter="url(#sk)" fill="#faf9f2" stroke="#0B3D2E" stroke-width="1.2" stroke-linejoin="round">
+    <rect x="34" y="134" width="90" height="116" rx="3" transform="rotate(-4 79 192)"/>
+    <rect x="40" y="130" width="90" height="116" rx="3" transform="rotate(-1.5 85 188)"/>
+    <rect x="46" y="126" width="90" height="116" rx="3"/>
+  </g>
+  <!-- doc lines -->
+  <g stroke="#0B3D2E" stroke-width="0.7" opacity="0.3" filter="url(#sk)">
+    <line x1="60" y1="152" x2="122" y2="152"/>
+    <line x1="60" y1="164" x2="122" y2="164"/>
+    <line x1="60" y1="176" x2="110" y2="176"/>
+    <line x1="60" y1="196" x2="122" y2="196"/>
+    <line x1="60" y1="208" x2="117" y2="208"/>
+    <line x1="60" y1="220" x2="122" y2="220"/>
+    <line x1="60" y1="232" x2="100" y2="232"/>
+  </g>
+  <text x="91" y="112" font-family="'Courier New',monospace" font-size="8" fill="#0B3D2E" opacity="0.4" text-anchor="middle" letter-spacing="1">DOCUMENTS</text>
+
+  <!-- arrow 1 -->
+  <g stroke="#0B3D2E" stroke-width="1" opacity="0.45" filter="url(#sk)">
+    <line x1="140" y1="195" x2="174" y2="195"/>
+    <polyline points="168,189 174,195 168,201" fill="none"/>
+  </g>
+
+  <!-- vector space (center-left) — cloud of dots representing embeddings -->
+  <g filter="url(#sk)" opacity="0.55">
+    <!-- dense cluster of small dots -->
+    <circle cx="210" cy="165" r="2.8" fill="#0B3D2E"/>
+    <circle cx="224" cy="158" r="2.2" fill="#0B3D2E"/>
+    <circle cx="198" cy="178" r="2.5" fill="#0B3D2E"/>
+    <circle cx="218" cy="182" r="2" fill="#0B3D2E"/>
+    <circle cx="234" cy="170" r="2.4" fill="#0B3D2E"/>
+    <circle cx="206" cy="192" r="1.8" fill="#0B3D2E"/>
+    <circle cx="228" cy="193" r="2.6" fill="#0B3D2E"/>
+    <circle cx="242" cy="183" r="2" fill="#0B3D2E"/>
+    <circle cx="214" cy="205" r="2.3" fill="#0B3D2E"/>
+    <circle cx="236" cy="208" r="1.7" fill="#0B3D2E"/>
+    <circle cx="196" cy="210" r="2.8" fill="#0B3D2E"/>
+    <circle cx="248" cy="198" r="2.2" fill="#0B3D2E"/>
+    <circle cx="204" cy="220" r="2" fill="#0B3D2E"/>
+    <circle cx="222" cy="217" r="2.5" fill="#0B3D2E"/>
+    <circle cx="240" cy="220" r="1.9" fill="#7A2036" opacity="0.8"/>
+    <circle cx="228" cy="228" r="2.8" fill="#7A2036" opacity="0.8"/>
+    <circle cx="210" cy="230" r="2" fill="#7A2036" opacity="0.8"/>
+    <circle cx="246" cy="212" r="2.4" fill="#7A2036" opacity="0.8"/>
+    <circle cx="192" cy="198" r="1.8" fill="#0B3D2E"/>
+    <circle cx="254" cy="172" r="2" fill="#0B3D2E"/>
+  </g>
+  <!-- dashed bounding ellipse -->
+  <ellipse cx="222" cy="194" rx="52" ry="48" fill="none" stroke="#0B3D2E" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.28" filter="url(#sk)"/>
+  <!-- retrieval highlight ring around maroon dots -->
+  <ellipse cx="233" cy="218" rx="22" ry="16" fill="none" stroke="#7A2036" stroke-width="0.9" stroke-dasharray="3 3" opacity="0.5" filter="url(#sk)"/>
+  <text x="222" y="106" font-family="'Courier New',monospace" font-size="8" fill="#0B3D2E" opacity="0.4" text-anchor="middle" letter-spacing="1">VECTOR SPACE</text>
+
+  <!-- arrow 2 -->
+  <g stroke="#0B3D2E" stroke-width="1" opacity="0.45" filter="url(#sk)">
+    <line x1="276" y1="195" x2="310" y2="195"/>
+    <polyline points="304,189 310,195 304,201" fill="none"/>
+  </g>
+
+  <!-- LLM circle (center-right) -->
+  <g filter="url(#sk)">
+    <circle cx="356" cy="195" r="42" fill="rgba(11,61,46,0.05)" stroke="#0B3D2E" stroke-width="1.5"/>
+    <circle cx="356" cy="195" r="28" fill="none" stroke="#0B3D2E" stroke-width="0.7" stroke-dasharray="3.5 3.5" opacity="0.3"/>
+    <!-- inner wave lines -->
+    <path d="M330,188 Q343,182 356,188 Q369,194 382,188" fill="none" stroke="#0B3D2E" stroke-width="0.8" opacity="0.28"/>
+    <path d="M330,198 Q343,192 356,198 Q369,204 382,198" fill="none" stroke="#0B3D2E" stroke-width="0.8" opacity="0.28"/>
+    <path d="M330,208 Q343,202 356,208 Q369,214 382,208" fill="none" stroke="#0B3D2E" stroke-width="0.8" opacity="0.22"/>
+    <circle cx="356" cy="195" r="7" fill="rgba(122,32,54,0.12)" stroke="#7A2036" stroke-width="1.2"/>
+  </g>
+  <text x="356" y="106" font-family="'Courier New',monospace" font-size="8" fill="#0B3D2E" opacity="0.4" text-anchor="middle" letter-spacing="1">LANGUAGE</text>
+  <text x="356" y="117" font-family="'Courier New',monospace" font-size="8" fill="#0B3D2E" opacity="0.4" text-anchor="middle" letter-spacing="1">MODEL</text>
+
+  <!-- arrow 3 -->
+  <g stroke="#0B3D2E" stroke-width="1" opacity="0.45" filter="url(#sk)">
+    <line x1="400" y1="195" x2="430" y2="195"/>
+    <polyline points="424,189 430,195 424,201" fill="none"/>
+  </g>
+
+  <!-- answer box (right) -->
+  <g filter="url(#sk)" fill="rgba(122,32,54,0.06)" stroke="#7A2036" stroke-width="1.3" stroke-linejoin="round">
+    <rect x="432" y="152" width="54" height="86" rx="4"/>
+  </g>
+  <!-- answer lines with citation marks -->
+  <g stroke="#0B3D2E" stroke-width="0.7" opacity="0.35" filter="url(#sk)">
+    <line x1="442" y1="172" x2="476" y2="172"/>
+    <line x1="442" y1="182" x2="476" y2="182"/>
+    <line x1="442" y1="192" x2="465" y2="192"/>
+  </g>
+  <!-- citation footnote marks -->
+  <g fill="#7A2036" opacity="0.55" filter="url(#sk)">
+    <circle cx="448" cy="210" r="3"/>
+    <circle cx="458" cy="210" r="3"/>
+    <circle cx="468" cy="210" r="3"/>
+  </g>
+  <text x="459" y="110" font-family="'Courier New',monospace" font-size="8" fill="#7A2036" opacity="0.55" text-anchor="middle" letter-spacing="1">ANSWER</text>
+  <text x="459" y="122" font-family="'Courier New',monospace" font-size="8" fill="#7A2036" opacity="0.55" text-anchor="middle" letter-spacing="1">+ SOURCES</text>
+
+  <text x="34" y="30" font-family="'Courier New',monospace" font-size="7.5" fill="#0B3D2E" opacity="0.28" letter-spacing="1">KALI RAG — RETRIEVAL PIPELINE</text>
+  <line x1="34" y1="34" x2="240" y2="34" stroke="#0B3D2E" stroke-width="0.5" opacity="0.2"/>
+  <text x="466" y="388" font-family="'Courier New',monospace" font-size="7" fill="#0B3D2E" opacity="0.22" text-anchor="end" letter-spacing="1">FIG 04</text>
+</svg>

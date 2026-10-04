@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <filter id="sk" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <pattern id="g" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.85" fill="#0B3D2E" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="#faf9f2"/>
+  <rect width="800" height="450" fill="url(#g)"/>
+
+  <!-- weak connection web -->
+  <g stroke="#0B3D2E" stroke-width="0.7" opacity="0.15" filter="url(#sk)">
+    <line x1="152" y1="135" x2="328" y2="202"/>
+    <line x1="152" y1="225" x2="328" y2="225"/>
+    <line x1="152" y1="315" x2="328" y2="248"/>
+    <line x1="472" y1="202" x2="600" y2="145"/>
+    <line x1="472" y1="225" x2="600" y2="225"/>
+    <line x1="472" y1="248" x2="600" y2="305"/>
+    <!-- extra cross-connections -->
+    <line x1="152" y1="135" x2="328" y2="248"/>
+    <line x1="152" y1="315" x2="328" y2="202"/>
+    <line x1="472" y1="202" x2="600" y2="305"/>
+    <line x1="472" y1="248" x2="600" y2="145"/>
+  </g>
+
+  <!-- input nodes -->
+  <g filter="url(#sk)" fill="#faf9f2" stroke="#0B3D2E" stroke-width="1.3" stroke-linejoin="round">
+    <circle cx="120" cy="135" r="30"/>
+    <circle cx="120" cy="225" r="30"/>
+    <circle cx="120" cy="315" r="30"/>
+  </g>
+  <!-- inner marks -->
+  <g stroke="#0B3D2E" stroke-width="0.8" opacity="0.35" filter="url(#sk)">
+    <line x1="104" y1="130" x2="136" y2="130"/> <line x1="104" y1="140" x2="136" y2="140"/>
+    <line x1="104" y1="220" x2="136" y2="220"/> <line x1="104" y1="230" x2="136" y2="230"/>
+    <line x1="104" y1="310" x2="136" y2="310"/> <line x1="104" y1="320" x2="136" y2="320"/>
+  </g>
+
+  <!-- agent center -->
+  <g filter="url(#sk)">
+    <circle cx="400" cy="225" r="72" fill="rgba(11,61,46,0.055)" stroke="#0B3D2E" stroke-width="1.6"/>
+    <circle cx="400" cy="225" r="86" fill="none" stroke="#0B3D2E" stroke-width="0.65" stroke-dasharray="4.5 4.5" opacity="0.28"/>
+    <!-- circuit cross -->
+    <line x1="400" y1="160" x2="400" y2="290" stroke="#0B3D2E" stroke-width="0.9" opacity="0.25"/>
+    <line x1="336" y1="225" x2="464" y2="225" stroke="#0B3D2E" stroke-width="0.9" opacity="0.25"/>
+    <line x1="354" y1="179" x2="446" y2="271" stroke="#0B3D2E" stroke-width="0.6" opacity="0.15"/>
+    <line x1="446" y1="179" x2="354" y2="271" stroke="#0B3D2E" stroke-width="0.6" opacity="0.15"/>
+    <!-- ring dots -->
+    <circle cx="400" cy="153" r="4.5" fill="#0B3D2E" opacity="0.35"/>
+    <circle cx="400" cy="297" r="4.5" fill="#0B3D2E" opacity="0.35"/>
+    <circle cx="328" cy="225" r="4.5" fill="#0B3D2E" opacity="0.35"/>
+    <circle cx="472" cy="225" r="4.5" fill="#0B3D2E" opacity="0.35"/>
+    <!-- maroon core -->
+    <circle cx="400" cy="225" r="11" fill="rgba(122,32,54,0.10)" stroke="#7A2036" stroke-width="1.3"/>
+    <circle cx="400" cy="225" r="4" fill="#7A2036" opacity="0.45"/>
+  </g>
+
+  <!-- output boxes -->
+  <g filter="url(#sk)" fill="rgba(11,61,46,0.045)" stroke="#0B3D2E" stroke-width="1.25" stroke-linejoin="round">
+    <rect x="612" y="120" width="112" height="32" rx="3"/>
+    <rect x="612" y="209" width="112" height="32" rx="3"/>
+    <rect x="612" y="298" width="112" height="32" rx="3"/>
+  </g>
+  <!-- output arrows -->
+  <g stroke="#0B3D2E" stroke-width="1" opacity="0.5" filter="url(#sk)">
+    <line x1="600" y1="136" x2="610" y2="136"/>
+    <line x1="600" y1="225" x2="610" y2="225"/>
+    <line x1="600" y1="314" x2="610" y2="314"/>
+    <polyline points="607,130 612,136 607,142" fill="none"/>
+    <polyline points="607,219 612,225 607,231" fill="none"/>
+    <polyline points="607,308 612,314 607,320" fill="none"/>
+  </g>
+
+  <!-- labels -->
+  <g font-family="'Courier New',monospace" text-anchor="middle" fill="#0B3D2E" opacity="0.62" letter-spacing="1.2">
+    <text x="120" y="139" font-size="8">DATA</text>
+    <text x="120" y="229" font-size="8">DOCS</text>
+    <text x="120" y="319" font-size="8">API</text>
+    <text x="668" y="141" font-size="8">ANSWER</text>
+    <text x="668" y="230" font-size="8">ACTION</text>
+    <text x="668" y="319" font-size="8">REPORT</text>
+    <text x="400" y="358" font-size="9" letter-spacing="2">AI AGENT</text>
+  </g>
+
+  <text x="46" y="40" font-family="'Courier New',monospace" font-size="7.5" fill="#0B3D2E" opacity="0.28" letter-spacing="1">KALI — AGENTIC ARCHITECTURE</text>
+  <line x1="46" y1="44" x2="276" y2="44" stroke="#0B3D2E" stroke-width="0.5" opacity="0.2"/>
+  <text x="754" y="432" font-family="'Courier New',monospace" font-size="7" fill="#0B3D2E" opacity="0.22" text-anchor="end" letter-spacing="1">FIG 01</text>
+</svg>
