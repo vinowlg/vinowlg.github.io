@@ -25,7 +25,26 @@
 
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="kali home"><img src="assets/img/logo-kali.png" alt="kali" width="168" height="96"></a>
+    <a class="brand" href="index.html" aria-label="kali home">
+      <svg class="brand-mark" viewBox="0 0 56 88" width="32" height="50" aria-hidden="true" fill="none">
+        <!-- inverted-K: centre right, 4 arms — up, down, upper-left, lower-left -->
+        <!-- centre sits at (50,44); arms reach left so the 'k' letter completes the star -->
+        <g stroke="#7A2036" stroke-width="2.8" stroke-linecap="round">
+          <line x1="50" y1="44" x2="50" y2="5"/>
+          <line x1="50" y1="44" x2="50" y2="83"/>
+          <line x1="50" y1="44" x2="6"  y2="16"/>
+          <line x1="50" y1="44" x2="6"  y2="72"/>
+        </g>
+        <g fill="#7A2036">
+          <circle cx="50" cy="5"  r="5.5"/>
+          <circle cx="50" cy="83" r="5.5"/>
+          <circle cx="6"  cy="16" r="5.5"/>
+          <circle cx="6"  cy="72" r="5.5"/>
+        </g>
+        <circle cx="50" cy="44" r="9" fill="#0B3D2E"/>
+      </svg>
+      <span class="brand-name">kali</span>
+    </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
