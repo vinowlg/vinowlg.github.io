@@ -55,7 +55,7 @@ a { color: inherit; }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .brand { display: inline-flex; align-items: center; }
 .brand img { height: 40px; width: auto; }
-.nav-links { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.nav-links { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0 0 0 auto; padding: 0; }
 .nav-links a {
   display: inline-block; padding: 8px 14px; border-radius: 999px;
   text-decoration: none; font-size: 15px; font-weight: 500; color: var(--ink-2);
@@ -383,3 +383,232 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   * { transition: none !important; }
 }
 .no-js .reveal { opacity: 1; transform: none; }
+
+/* ---------- Homepage: brand logo hidden until hero name scrolls away ---------- */
+
+/* Fixed positioning removes the header from document flow so the sky fills the full viewport */
+body[data-page="home"] .site-header { position: fixed; width: 100%; }
+
+/* In sky-mode, hide only the brand logo — nav links stay visible over the sky */
+.site-header.sky-mode .brand {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+/* Reveal brand logo once the hero kali.ltd name has scrolled past */
+.site-header.past-title .brand {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Sky Hero ---------- */
+.sky-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.sky-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    #01060e 0%,
+    #020c1e 10%,
+    #04142e 22%,
+    #081c44 34%,
+    #0e2656 46%,
+    #1c2e70 57%,
+    #38286e 66%,
+    #602460 74%,
+    #923e54 81%,
+    #c25e4a 87%,
+    #d87840 92%,
+    #e8924e 96%,
+    #f0a858 100%
+  );
+  animation: sky-breathe 14s ease-in-out infinite;
+}
+
+@keyframes sky-breathe {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.07) saturate(1.08); }
+}
+
+.sky-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.sky-glow-1 {
+  width: 70vw; height: 28vh;
+  bottom: 2%; left: 50%; transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(220,120,50,0.28) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: glow-pulse 10s ease-in-out infinite;
+}
+.sky-glow-2 {
+  width: 45vw; height: 45vh;
+  top: 18%; left: 25%;
+  background: radial-gradient(ellipse, rgba(70,40,140,0.32) 0%, transparent 70%);
+  filter: blur(70px);
+  animation: glow-drift 16s ease-in-out infinite;
+}
+.sky-glow-3 {
+  width: 40vw; height: 38vh;
+  top: 12%; right: 15%;
+  background: radial-gradient(ellipse, rgba(30,70,160,0.28) 0%, transparent 70%);
+  filter: blur(65px);
+  animation: glow-drift 20s ease-in-out infinite reverse;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.18); }
+}
+@keyframes glow-drift {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(5%, 4%); }
+  66% { transform: translate(-4%, 6%); }
+}
+
+/* Canvas sits above the CSS sky — JS draws aurora ribbons + stars */
+.sky-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sky-content {
+  position: relative;
+  z-index: 2;   /* above canvas (z-index: 1) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 var(--gutter);
+}
+
+.hero-mark {
+  filter:
+    drop-shadow(0 4px 24px rgba(0,0,0,0.18))
+    drop-shadow(0 0 50px rgba(255,255,255,0.35));
+  margin-bottom: 4px;
+}
+.hero-mark.floating {
+  animation: mark-float 7s ease-in-out infinite;
+}
+@keyframes mark-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.sky-brand {
+  font-family: var(--serif);
+  font-size: clamp(56px, 10vw, 130px);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.25), 0 1px 4px rgba(0,0,0,0.15);
+}
+.sky-dot { color: #d45072; }
+.sky-tld { color: rgba(255,255,255,0.55); font-weight: 300; }
+
+.sky-tagline {
+  font-size: clamp(15px, 1.6vw, 19px);
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+  max-width: 480px;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}
+
+.sky-btns { justify-content: center; margin-top: 12px; }
+
+.btn-glass {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.38);
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,0.28);
+  border-color: rgba(255,255,255,0.55);
+  color: #fff;
+}
+.btn-sky-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.btn-sky-ghost:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.55);
+  color: #fff;
+}
+
+.sky-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color .2s ease;
+  animation: scroll-bounce 2.4s ease-in-out infinite;
+}
+.sky-scroll:hover { color: rgba(255,255,255,0.9); }
+.sky-scroll svg { width: 26px; height: 26px; }
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.55; }
+  50% { transform: translateX(-50%) translateY(9px); opacity: 0.95; }
+}
+
+/* Sky-mode header — transparent over the hero */
+.site-header.sky-mode {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent !important;
+}
+.site-header.sky-mode .brand img { filter: brightness(20) saturate(0); }
+.site-header.sky-mode .nav-links a { color: rgba(255,255,255,0.85); }
+.site-header.sky-mode .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.12); }
+.site-header.sky-mode .nav-links a[aria-current="page"] { color: #fff; }
+.site-header.sky-mode .nav-links a.nav-cta {
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.32);
+  color: #fff;
+}
+.site-header.sky-mode .nav-links a.nav-cta:hover { background: rgba(255,255,255,0.26); }
+.site-header.sky-mode .nav-toggle { color: #fff; }
+.site-header.sky-mode .nav-toggle span { background: #fff; }
+
+@media (max-width: 820px) {
+  .site-header.sky-mode .nav-links {
+    background: rgba(20, 60, 110, 0.95);
+    border-bottom-color: rgba(255,255,255,0.12);
+  }
+}
+
+/* Reduce motion — freeze sky canvas + other animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-mark { animation: none; }
+  .sky-scroll { animation: none; opacity: 0.6; }
+}
